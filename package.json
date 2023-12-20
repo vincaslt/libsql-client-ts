@@ -89,6 +89,7 @@
     ],
     "scripts": {
         "prepublishOnly": "npm run build",
+        "prepare": "npm run build",
         "prebuild": "rm -rf ./lib-cjs ./lib-esm",
         "build": "npm run build:cjs && npm run build:esm",
         "build:cjs": "tsc -p tsconfig.build-cjs.json",
@@ -99,6 +100,7 @@
         "typedoc": "rm -rf ./docs && typedoc"
     },
     "dependencies": {
+        "@libsql/client": "github:vincaslt/libsql-client-ts",
         "@libsql/hrana-client": "^0.5.5",
         "js-base64": "^3.7.5",
         "libsql": "^0.2.0-pre.6"
