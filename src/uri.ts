@@ -62,7 +62,7 @@ const URI_RE = (() => {
     const PATH = '(?<path>[^?#]*)';
     const QUERY = '(?<query>[^#]*)';
     const FRAGMENT = '(?<fragment>.*)'
-    return new RegExp(`^${SCHEME}:(//${AUTHORITY})?${PATH}(\\?${QUERY})?(#${FRAGMENT})?$`, "su");
+    return new RegExp(`^${SCHEME}:(\/\/${AUTHORITY})?${PATH}(\\?${QUERY})?(#${FRAGMENT})?$`, "su");
 })();
 
 function parseAuthority(text: string): Authority {
